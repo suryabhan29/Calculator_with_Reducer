@@ -91,7 +91,7 @@ let reducerFunction = (oldState,action)=>{
             operator: "="
            }
 
-            break;
+            
           case NUMBER:
             if(newState.operator === ''){
               return {
@@ -105,7 +105,7 @@ let reducerFunction = (oldState,action)=>{
               }
             }
             
-            break;
+            
           default:
           }
       return newState;
