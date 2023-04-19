@@ -27,21 +27,21 @@ let reducerFunction = (oldState,action)=>{
           operator: '',
           rightvalue: ''
          }
-            break;
+            
           case DIVISION:
            // alert('DIVISION');
            return {
             ...newState,
             operator: '/'
            }
-            break;
+            
           case MULTIPLICATION:
            // alert('MULTIPLICATION');
            return {
             ...newState,
             operator:'*'
            }
-            break;
+            
           case SUBSCRATION:
            // alert('SUBSCRATION');
 
@@ -49,14 +49,14 @@ let reducerFunction = (oldState,action)=>{
             ...newState,
             operator:'-'
            }
-            break;
+            
           case ADDITION:
            // alert('ADDITION');
            return {
             ...newState,
             operator: "+"
            }
-            break;
+            
           case RESULT:
             switch(newState.operator){
               case "+":
@@ -64,25 +64,25 @@ let reducerFunction = (oldState,action)=>{
                     ...newState,
                     result: parseFloat(newState.leftvalue) + parseFloat(newState.rightvalue)
                   }
-              break;
+              
               case "-":
                   return {
                     ...newState,
                     result: parseFloat(newState.leftvalue) - parseFloat(newState.rightvalue)
                   }
-              break;
+              
               case "/":
                   return {
                     ...newState,
                     result: parseFloat(newState.leftvalue) / parseFloat(newState.rightvalue)
                   }
-              break;
+              
               case "*":
                   return {
                     ...newState,
                     result:parseFloat(newState.leftvalue) * parseFloat(newState.rightvalue)
                   }
-              break;
+              
               default:
             }
            // alert('RESULT'); 
